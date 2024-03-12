@@ -12,7 +12,7 @@
     <title>Tupiniquim</title>
 </head>
 
-<body>
+<body class="max-container">
     <header>
         <div class="header-div-1">
             <div class="image-container">
@@ -26,9 +26,9 @@
         <div class="header-div-2">
             <div class="div-login">
                 <img src="./images/icone-login-teste-programador.png" alt="">
-                <button class="btn-login">Log in</button>
+                <button onclick="showMessage()" class="btn-login">Log in</button>
             </div>
-            <button class="btn-sing">Sign Up</button>
+            <button onclick="showMessage()" class="btn-sing">Sign Up</button>
         </div>
     </header>
     <section class="section-container-discover">
@@ -36,7 +36,7 @@
             <h1 class="discover-title">Start Your Workday Comfortably</h1>
             <p class="discover-p">Get in, sit back and experience the comfort of car that takes you directly to your
                 destination. Arriving work as a sardine with public transport or sweating is a thing of the past</p>
-            <button class="discover-button">Discover</button>
+            <button onclick="showMessage()" class="discover-button">Discover</button>
         </div>
         <div class="image-banner-container">
             <img class="image-banner" src="images/img-banner-teste-programador.png" alt="">
@@ -89,7 +89,7 @@
                 Traveling home and work will never be the same again. Our mission is to stop traffic jams and C02
                 pollution as a result of inefficient car commuting.</p>
             <p class="learn-pt">Are you in?</p>
-            <button class="learn-button">Learn more >></button>
+            <button onclick="showMessage()" class="learn-button">Learn more >></button>
         </div>
     </section>
     <section class="section-container-commitment">
@@ -103,9 +103,10 @@
 
             <p class="commitment-p">With every safety feature we add and evey standard in the Community Guide that we
                 uphold, we are commited to protecting you throughout the journey. Learn more about our Community Guide
-                <span class="commitment-pt">here.</span></p>
+                <span onclick="showMessage()" class="commitment-pt">here.</span>
+            </p>
 
-            <button class="commitment-button">See all safety features >></button>
+            <button onclick="showMessage()" class="commitment-button">See all safety features >></button>
         </div>
         <div class="image-commitment-container">
             <img class="image-commitment" src="./images/img-fundo-2-teste-programador.png" alt="">
@@ -118,14 +119,14 @@
             </div>
             <h2 class="dowload-text">Dowload the DriveOn application to get more benefits and experience</h2>
             <div class="dowload-buttons">
-                <button class="dowload-button-1">
+                <button onclick="showMessage()" class="dowload-button-1">
                     <img src="./images/path554teste2.svg" alt="">
                     <div class="texts-butons-dowloads">
                         <p class="text-button-dowload-1">GET IT ON</p>
                         <p class="text-button-dowload-2">Clay Store</p>
                     </div>
                 </button>
-                <button class="dowload-button-2">
+                <button onclick="showMessage()" class="dowload-button-2">
                     <img class="image-button2" src="./images/path534teste2.svg" alt="">
                     <p class="button-2-text">Play APP</p>
                 </button>
@@ -149,7 +150,7 @@
             </div>
         </div>
         <div>
-                <img src="./images/setas-teste-programador.png" alt="">    
+            <img src="./images/setas-teste-programador.png" alt="">
         </div>
     </section>
     <section class="section-resolution-container">
@@ -197,6 +198,14 @@
             </div>
         </footer>
     </section>
+    <div id="snackbar">Você clicou em um botão</div>
+    <script>
+        function showMessage() {
+            var x = document.getElementById("snackbar");
+            x.className = "show";
+            setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
+        }
+    </script>
 </body>
 
 </html>
